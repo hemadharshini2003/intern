@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .score{
+            width: 30%;
+            background-color: grey;
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div class="score">
+        <h1>Score card</h1>
+        <table>
+            <tr>
+                <td id="ba1">rohit</td>
+                <td id="r1">0</td>
+
+            </tr>
+            <tr>
+                <td id="ba2">virat</td>
+                <td id="r2">0</td>
+            </tr>
+            <tr>
+                <button id="b1">R</button>
+                <button id="b2">V</button>
+            </tr>
+        </table>
+    </div>
+    <script>
+        let batsman1="rohit";
+        let batsman2="virat";
+        let run1=0;
+        let run2 =0;
+        document.getElementById("b1").onclick=function(){
+            run1=run1+1;
+            document.getElementById(r1).innerHTML=run1;
+            update();
+        }
+        document.getElementById("b2").onclick=function(){
+            run2=run2+1;
+            document.getElementById(r2).innerHTML=run2;
+            update();  
+           }
+        function update(){
+            if(run1>=run2){
+                document.getElementById("ba1").innerHTML=batsman1;
+                document.getElementById(r1).innerHTML=run1;
+                document.getElementById("ba2").innerHTML=batsman2;
+                document.getElementById(r1).innerHTML=run2;
+            }
+            else if(run2>run1){
+                document.getElementById("ba1").innerHTML=batsman2;
+                document.getElementById(r1).innerHTML=run2;
+                document.getElementById("ba2").innerHTML=batsman1;
+                document.getElementById(r1).innerHTML=run1;
+            }
+
+
+
+        }
+
+
+    </script>
+</body>
+</html>
